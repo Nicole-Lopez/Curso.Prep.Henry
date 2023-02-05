@@ -18,7 +18,7 @@ const {
 } = require('../homework');
 
 
-xdescribe('obtenerMayor(x, y)', function() {
+describe('obtenerMayor(x, y)', function() {
   it('should return x if it is larger than y', function() {
     expect(obtenerMayor(10, 5)).toBe(10);
   });
@@ -30,7 +30,7 @@ xdescribe('obtenerMayor(x, y)', function() {
   });
 });
 
-xdescribe('mayoriaDeEdad(edad)', function() {
+describe('mayoriaDeEdad(edad)', function() {
   it('should return \'Allowed\'if edad is equal or greater than 18', function() {
     expect(mayoriaDeEdad(18)).toBe('Allowed');
     expect(mayoriaDeEdad(35)).toBe('Allowed');
@@ -40,7 +40,7 @@ xdescribe('mayoriaDeEdad(edad)', function() {
   });
 });
 
-xdescribe('conection(status)', function() {
+describe('conection(status)', function() {
   it('should return the conection state of user', function() {
     expect(conection(1)).toBe('Online');
     expect(conection(2)).toBe('Away');
@@ -49,7 +49,7 @@ xdescribe('conection(status)', function() {
   });
 });
 
-xdescribe('saludo(idioma)', function() {
+describe('saludo(idioma)', function() {
   it('should return \'Guten Tag!\' for aleman', function() {
     expect(saludo('aleman')).toBe('Guten Tag!');
   });
@@ -65,7 +65,7 @@ xdescribe('saludo(idioma)', function() {
   });
 });
 
-xdescribe('colors(color)', function() {
+describe('colors(color)', function() {
   it('should return \'This is {color}\'', function() {
     expect(colors("blue")).toBe('This is blue');
     expect(colors("red")).toBe('This is red');
@@ -78,7 +78,7 @@ xdescribe('colors(color)', function() {
   });
 });
 
-xdescribe('esDiezOCinco(num)', function() {
+describe('esDiezOCinco(num)', function() {
   it('should return true if num is 10 or 5', function() {
     expect(esDiezOCinco(10)).toBe(true);
     expect(esDiezOCinco(5)).toBe(true);
@@ -91,7 +91,7 @@ xdescribe('esDiezOCinco(num)', function() {
   });
 });
 
-xdescribe('estaEnRango(num)', function() {
+describe('estaEnRango(num)', function() {
   it('should return true if num is inside range', function() {
     expect(estaEnRango(35.5)).toBe(true);
     expect(estaEnRango(40)).toBe(true);
@@ -106,7 +106,7 @@ xdescribe('estaEnRango(num)', function() {
   });
 });
 
-xdescribe('esEntero(num)', function() {
+describe('esEntero(num)', function() {
   it('should return true if num is 5', function() {
     expect(esEntero(5)).toBe(true);
   });
@@ -121,7 +121,7 @@ xdescribe('esEntero(num)', function() {
   });
 });
 
-xdescribe('fizzBuzz(num)', function() {
+describe('fizzBuzz(num)', function() {
   it('should return fizz if divisible by 3', function() {
     expect(fizzBuzz(9)).toBe('fizz');
   });
@@ -136,7 +136,7 @@ xdescribe('fizzBuzz(num)', function() {
   });
 });
 
-xdescribe('operadoresLogicos(num1, num2, num3)', function() {
+describe('operadoresLogicos(num1, num2, num3)', function() {
   it('should return \'Número 1 es mayor y positivo\' if num1 is positive and if it is greater than num2 and num3', function() {
     expect(operadoresLogicos(50, 2, 15)).toBe('Número 1 es mayor y positivo');
   });
@@ -154,7 +154,7 @@ xdescribe('operadoresLogicos(num1, num2, num3)', function() {
   });
 });
 
-xdescribe('esPrimo(num)', function() {
+describe('esPrimo(num)', function() {
   it('should return true if num is prime', function() {
     expect(esPrimo(7)).toBe(true);
     expect(esPrimo(97)).toBe(true);
@@ -170,7 +170,7 @@ xdescribe('esPrimo(num)', function() {
   });
 });
 
-xdescribe ('esVerdadero(valor)', function() {
+describe ('esVerdadero(valor)', function() {
   it('should return Soy verdadero if valor is true', function() {
     expect(esVerdadero(true)).toBe("Soy verdadero");
   });
@@ -179,13 +179,13 @@ xdescribe ('esVerdadero(valor)', function() {
   });
 });
 
-xdescribe ('tablaDelSeis()', function() {
+describe ('tablaDelSeis()', function() {
   it('should return multiplication table of 6', function() {
     expect(tablaDelSeis()).toEqual([0 , 6, 12, 18, 24, 30, 36, 42, 48, 54, 60]);
   });
 });
 
-xdescribe ('tieneTresDigitos(numero)', function() {
+describe ('tieneTresDigitos(numero)', function() {
   it('should return true if numero has 3 digits', function() {
     expect(tieneTresDigitos(100)).toBe(true);
     expect(tieneTresDigitos(820)).toBe(true);
@@ -195,7 +195,7 @@ xdescribe ('tieneTresDigitos(numero)', function() {
   });
 });
 
-xdescribe('doWhile(numero)', function() {
+describe('doWhile(numero)', function() {
   it('should add 5 to number until reaching a limit of 8 times and return the sum value', function() {
     expect(doWhile(5)).toBe(45);
     expect(doWhile(100)).toBe(140);
