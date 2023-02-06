@@ -9,14 +9,14 @@ const {
 	filter
 } = require('../homework');
 
-xdescribe('mayuscula(nombre)', function() {
+describe('mayuscula(nombre)', function() {
 	it('should return the same name with the first letter capitalized', function() {
 		expect(mayuscula("mario")).toBe("Mario");
 		expect(mayuscula("ana")).toBe("Ana");
 	});
 });
 
-xdescribe('invocarCallback(cb)', function() {
+describe('invocarCallback(cb)', function() {
   it('should invoke the callback that is passed in', function() {
 		const cb = jest.fn();
 		invocarCallback(cb);
@@ -24,7 +24,7 @@ xdescribe('invocarCallback(cb)', function() {
   });
 });
 
-xdescribe('operacionMatematica(n1, n2, cb)', function() {
+describe('operacionMatematica(n1, n2, cb)', function() {
 	it('should return the callback function passing it the received arguments', function() {
 		const cb = jest.fn();
 		operacionMatematica(100, 20, cb);
@@ -32,7 +32,7 @@ xdescribe('operacionMatematica(n1, n2, cb)', function() {
 	});
 });
 
-xdescribe('sumarArray(cb)', function() {
+describe('sumarArray(cb)', function() {
 	it('should pass the sum of all array numbers to cb', function(done) {
 		sumarArray([1, 2, 3, 4, 5], function(sum) {
 			expect(sum).toBe(15);
@@ -41,7 +41,7 @@ xdescribe('sumarArray(cb)', function() {
 	});
 });
 
-xdescribe('forEach(arr, cb)', function() {
+describe('forEach(arr, cb)', function() {
 	it('should pass all array items one by one to cb', function() {
 		const nums = [];
 		forEach([1, 2, 3, 4, 5], function(num) {
@@ -51,7 +51,7 @@ xdescribe('forEach(arr, cb)', function() {
 	});
 });
 
-xdescribe('map(arr, cb)', function() {
+describe('map(arr, cb)', function() {
 	it('should return an array of all the processed array elements', function() {
 		const squares = map([1, 2, 3, 4, 5], function(num) {
 			return num * num;
@@ -60,7 +60,7 @@ xdescribe('map(arr, cb)', function() {
 	});
 });
 
-xdescribe('filter(array)', function() {
+describe('filter(array)', function() {
 	it('should return an array conteining the words that starts with "a"', function() {
 		var array = ['abajo', 'pera', 'escalera', 'alerta', 'indice', 'azteca', 'arbol', 'buzo'];
 		expect(filter(array)).toEqual(["abajo", "alerta", "azteca", "arbol"]);
